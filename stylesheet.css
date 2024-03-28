@@ -6,6 +6,7 @@
 /* Styping for whole web application*/
 * {
     margin: 0px;
+    font-family: 'Montserrat';
 }
 
 /* Background styling */
@@ -27,7 +28,6 @@
 }
 
 .main-element h {
-    font-family: 'Montserrat';
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -42,10 +42,30 @@
 }
 
 .new-task {
-    width: 100%;
     display: flex;
     align-items: center;
-    padding: 10px 0px 10px;
-    background: linear-gradient(180deg,  #b0b6ba, #0b1d34);
-    border-radius: 15px;
+    justify-content: space-between;
+    padding: 5px 10px 5px 15px;
+}
+
+.new-task button {
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    background: linear-gradient(150deg,  #b0b6ba, #117fcf);
+    border-radius: 10px;
+}
+
+.new-task input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 545px;
+    padding: 10px;
+    background: #b0b6ba;
+    border-radius: 10px;
+}
+
+.new-task input::placeholder {
+    color: #000000;
 }
