@@ -7,6 +7,9 @@
 const input = document.getElementById("new-task-input");
 const task_list = document.getElementById("user-tasks");
 
+// call load list function to load the list on startup
+load_list();
+
 // funtion to create a task once 'Create Task' button is clicked
 function create_task() {
 
@@ -27,6 +30,9 @@ function create_task() {
         let span = document.createElement("span");
         span.innerHTML = "delete";
         li.appendChild(span);
+
+        //save the list 
+        save_list();
         
         // house keeping:
         input.classList.remove("color-class"); // switch placeholder color back
@@ -46,5 +52,20 @@ task_list.addEventListener("click",
         if (event.target.nodeName === "SPAN"){
             event.target.parentElement.remove();
         }
+
+        //save the to do list
+        save_list();
     }
 );
+
+// function to save the To Do List in local storage
+function save_list() {
+    //save the task_list variable to local storage
+    localStorage.setItem("to_do_list", task_list.innerHTML);
+}
+
+// function to load the To Do List on launch
+function load_list(){
+    //get the task list from local storage
+    task_list.innerHTML = localStorage.getItem("to_do_list");
+}
