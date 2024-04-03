@@ -27,4 +27,15 @@ function create_task() {
         input.classList.remove("color-class"); // switch placeholder color back
         input.value = ""; // reset the input box
     }
-}
+};
+
+// method to toggle the 'completed' class on a task
+task_list.addEventListener("click", 
+
+    function(event) {
+        // check if we click on a task, then toggle the completed status
+        if (event.target.nodeName === "LI"){
+            event.target.classList.toggle('completed');
+        }
+    }
+);

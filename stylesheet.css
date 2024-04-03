@@ -67,10 +67,6 @@
     border-radius: 10px;
 }
 
-/* .new-task input::placeholder {
-    color: #000000;
-} */
-
 .color-class::-webkit-input-placeholder {
     color: #DC143C;
 }
@@ -107,6 +103,12 @@
 
 .tasks ul li.completed::before {
     background-image: url(images/Completed-Task.png);
+}
+
+.tasks ul li:hover {
+    transition: box-shadow 0.2s, padding 0.2s, color 0.2s;
+    color: #117fcf;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .tasks ul li.completed {
