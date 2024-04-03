@@ -28,7 +28,7 @@
 }
 
 .main-element h {
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -51,16 +51,17 @@
 .new-task button {
     padding: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 17px;
     background: linear-gradient(150deg,  #b0b6ba, #117fcf);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .new-task input {
     border: none;
     outline: none;
-    font-size: 15px;
-    width: 545px;
+    font-size: 17px;
+    width: 535px;
     padding: 10px;
     background: #b0b6ba;
     border-radius: 10px;
@@ -68,4 +69,42 @@
 
 .new-task input::placeholder {
     color: #000000;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px 5px 15px;
+}
+
+.tasks h2 {
+    font-size: 25px;
+}
+
+.tasks ul li {
+    font-size: 17px;
+    cursor: pointer;
+    padding: 18px 0px 5px 50px;
+    list-style: none;
+    position: relative;
+}
+
+.tasks ul li::before {
+    content: '';
+    background-image: url(images/Uncompleted-Task.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    top: 12px;
+    left: 8px;
+    position: absolute;
+}
+
+.tasks ul li.completed::before {
+    background-image: url(images/Completed-Task.png);
+}
+
+.tasks ul li.completed {
+    color: #b0b6ba;
 }
