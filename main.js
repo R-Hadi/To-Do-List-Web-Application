@@ -22,6 +22,11 @@ function create_task() {
         li.innerHTML = input.value;
         //add to the task list
         task_list.appendChild(li);
+
+        //add delete button in span of the html text
+        let span = document.createElement("span");
+        span.innerHTML = "delete";
+        li.appendChild(span);
         
         // house keeping:
         input.classList.remove("color-class"); // switch placeholder color back
@@ -29,13 +34,17 @@ function create_task() {
     }
 };
 
-// method to toggle the 'completed' class on a task
 task_list.addEventListener("click", 
 
     function(event) {
-        // check if we click on a task, then toggle the completed status
+        // check if user clicked on a task, then toggle the completed status
         if (event.target.nodeName === "LI"){
             event.target.classList.toggle('completed');
+        }
+
+        //check if user clicked on a delete button, then remove from list
+        if (event.target.nodeName === "SPAN"){
+            event.target.parentElement.remove();
         }
     }
 );

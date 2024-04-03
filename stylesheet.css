@@ -57,6 +57,10 @@
     cursor: pointer;
 }
 
+.new-task button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .new-task input {
     border: none;
     outline: none;
@@ -113,4 +117,18 @@
 
 .tasks ul li.completed {
     color: #b0b6ba;
+}
+
+.tasks ul li span {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tasks ul li:hover span{
+   visibility: visible;
 }
