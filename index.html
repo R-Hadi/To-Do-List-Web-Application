@@ -23,7 +23,7 @@
             <div class="main-element">
                 <h> <img src="/images/Check-Box-Logo.png"> Check Box </h>
                 <div class="new-task">
-                    <input id="new-task-input" placeholder="What Do You Need To Do?">
+                    <input id="new-task-input" placeholder="What Do You Need To Do?" onkeypress="handleKeyPress(event)">
                     <button id="input-button" type="button" onclick="create_task()">Create Task</button>
                 </div>
                 <div class="tasks">

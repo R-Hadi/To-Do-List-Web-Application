@@ -40,6 +40,14 @@ function create_task() {
     }
 };
 
+// function that allows the use of enter to add a task
+function handleKeyPress(event) {
+    if (event.keyCode === 13) { // 13 is the key code for Enter key
+        // call create task function to take care of the rest
+        create_task();
+    }
+}
+
 task_list.addEventListener("click", 
 
     function(event) {
