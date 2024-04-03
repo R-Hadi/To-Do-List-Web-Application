@@ -1,4 +1,4 @@
-/* Title: To-Do List Web Application Style Sheet 8?
+/* Title: To-Do List Web Application Style Sheet */
 /* Author: Rashed Hadi */
 /* Date Started: Thursday March 28th, 2024 */
 /* Date Completed: */
@@ -67,8 +67,12 @@
     border-radius: 10px;
 }
 
-.new-task input::placeholder {
+/* .new-task input::placeholder {
     color: #000000;
+} */
+
+.color-class::-webkit-input-placeholder {
+    color: #DC143C;
 }
 
 .tasks{

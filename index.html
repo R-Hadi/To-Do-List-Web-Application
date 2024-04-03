@@ -7,10 +7,14 @@
 
 <html>
     <head>
+        <!-- Update meta informaiton -->
         <meta name="description" content="Check Box, an industry leading To-Do List Application created by Rashed Hadi">
         <title> Check Box </title>
-        <link rel="icon" href=/images/Check-Box-Logo.png type="image/x-icon">
+        <!-- Import CSS Stylesheet -->
         <link rel="stylesheet" href="stylesheet.css">
+        <!-- Add the Logo to the tab section -->
+        <link rel="icon" href=/images/Check-Box-Logo.png type="image/x-icon">
+        <!-- Import font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     </head>
 
@@ -20,7 +24,7 @@
                 <h> <img src="/images/Check-Box-Logo.png"> Check Box </h>
                 <div class="new-task">
                     <input id="new-task-input" placeholder="What Do You Need To Do?">
-                    <button type="button">Create Task</button>
+                    <button id="input-button" type="button" onclick="create_task()">Create Task</button>
                 </div>
                 <div class="tasks">
                     <h2>To Do:</h2>
@@ -31,6 +35,11 @@
                 </div>
             </div>
         </div>
+
+        <!-- Import JS File -->
+        <script src="main.js">
+        </script>
+
     </body>
 
 
