@@ -1,7 +1,7 @@
 /* Title: To-Do List Web Application Script */
 /* Author: Rashed Hadi */
 /* Date Started: Thursday March 28th, 2024 */
-/* Date Completed: */
+/* Date Completed: Friday April 5th, 2024 */
 
 // create variables to hold inputs and tsks
 const input = document.getElementById("new-task-input");
