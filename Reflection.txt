@@ -1,1 +1,14 @@
-Reflection
+Reflection:
+
+    Building this To-Do List application has been an exciting adventure since it provided me with the
+opportunity to refresh my HTML, CSS, and JavaScript skills while reigniting my creative side. Although
+the process was fairly seamless for the most part, I encountered a few problems along the way that tested
+my abilities and patience. The main major hiccup I encountered was regarding the hover animation I was 
+creating for the list elements. Initially, I spent time attempting to implement an animation that enlarges
+the task that the user was hovering on, encouraging them to click it and complete it. This resulted in
+many bugs that caused surrounding elements to glitch and move all over the place. After multiple
+tries and research, I decided to simplify the hover back to a shadow and color shift until I find time to 
+attempt to tackle the problem again. This encounter made me realise that at some points, it is better to 
+take a step back and revisit the basics when working on a project so one issue does not hold up the rest,
+as long as you always find time to back and reattempt to achieve the plans you had in the first place.
+

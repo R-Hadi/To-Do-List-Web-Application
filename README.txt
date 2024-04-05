@@ -10,5 +10,8 @@ How to use:
 - To delete a task, press on the delete button that appears on the right when hovering
 over a task.
 
+Enjoy!!!
+- Rashed
+
 
     
