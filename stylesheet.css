@@ -153,6 +153,8 @@
     font-size: 11px;
     text-align: center;
     line-height: 40px;
+    color: crimson;
+    
 }
 
 .tasks ul li:hover span{
