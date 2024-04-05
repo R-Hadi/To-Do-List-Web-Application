@@ -10,14 +10,23 @@ const task_list = document.getElementById("user-tasks");
 // call load list function to load the list on startup
 load_list();
 
+// call to start checking length
+checkLength();
+
 // funtion to create a task once 'Create Task' button is clicked
 function create_task() {
 
     // first we have to check if the input field is empty
     if (input.value === '') {
-        // change the colour of the text to red
-        input.classList.add('color-class');
+        // change the colour of the placeholder text to red
+        input.classList.add('color-class-empty');
     }
+    // then we check if the input is greater than 60
+    else if (input.value.length > 60) {
+        // change the colour of the input text to red
+        input.classList.add('color-class-length');
+    }
+    // if both pass, we can add to the list
     else {
         // create variable to hold the task
         let li = document.createElement("li");
@@ -35,12 +44,27 @@ function create_task() {
         save_list();
         
         // house keeping:
-        input.classList.remove("color-class"); // switch placeholder color back
+        input.classList.remove("color-class-empty"); // switch placeholder color back
+        input.classList.remove("color-class-length"); // switch input color back
         input.value = ""; // reset the input box
     }
 };
 
-// function that allows the use of enter to add a task
+// function that constantly checks the input length so it does not stay red after user
+// adds an input that is valid (less than 60 characters long)
+function checkLength(){
+    //interal that checks every 0.25 seconds
+    const intervalId = setInterval(() => {
+        if (input.value.length > 60) {
+            input.classList.add("color-class-length"); // switch input color to red
+        }
+        else {
+            input.classList.remove("color-class-length"); // switch input color back
+        }
+    }, 250) // 250 ms = 0.25 s
+}
+
+// function that allows the use of 'enter' key to add a task
 function handleKeyPress(event) {
     if (event.keyCode === 13) { // 13 is the key code for Enter key
         // call create task function to take care of the rest
@@ -48,6 +72,7 @@ function handleKeyPress(event) {
     }
 }
 
+// Event listner used to check when user is interacting with task list
 task_list.addEventListener("click", 
 
     function(event) {
